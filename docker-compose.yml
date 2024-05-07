@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  cassandra:
+    image: cassandra:latest
+    environment:
+      - CASSANDRA_BROADCAST_ADDRESS=cassandra
+      - CASSANDRA_CLUSTER_NAME=dev_cluster
+    ports:
+      - "9042:9042"
+    container_name: "cassandra"
+    volumes:
+      - ./migrations:/migrations
+      - cassandra-data:/var/lib/cassandra
+
+  migration:
+    image: cassandra:latest
+    depends_on:
+      - cassandra
+    environment:
+      - MIGRATION_DIR=/migrations
+      - CASSANDRA_HOST=cassandra
+      - CASSANDRA_PORT=9042
+    volumes:
+      - ./migrations:/migrations
+      - ./migration_script.sh:/migration_script.sh
+    command: bash ./migration_script.sh
+
+  app:
+    build: .
+    container_name: "blockchain_app"
+    depends_on:
+      - migration
+      - cassandra
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - CASSANDRA_HOST=cassandra
+      - CASSANDRA_KEYSPACE=devblockchaindata
+      - APP_HOST=0.0.0.0
+      - APP_PORT=30122
+      - ALLOWED_ORIGINS=https://localhost*,http://localhost*
+    ports:
+      - "30122:30122"
+    restart: on-failure
+
+volumes:
+  cassandra-data:

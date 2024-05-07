@@ -1,0 +1,3 @@
+namespace BlockchainHistoryRecorder.Application.Abstraction;
+
+public partial interface IBlockcypherHttpClient;

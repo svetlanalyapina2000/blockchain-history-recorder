@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainHistoryRecorder", "src\BlockchainHistoryRecorder\BlockchainHistoryRecorder.csproj", "{8EB413BD-C5DF-49A5-A372-4AEAF4999952}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F35C213-4A69-4C5C-8A54-A8180D5DA8F3}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		migration_script.sh = migration_script.sh
+		global.json = global.json
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92C5999C-A447-479E-8630-064E6FDC78DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{21C89A08-D942-45BE-A302-4EEB543573C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainHistoryRecorder.Tests.Integration", "tests\BlockchainHistoryRecorder.Tests.Integration\BlockchainHistoryRecorder.Tests.Integration.csproj", "{A524171E-2634-4C37-9C5C-FE04D16FE7C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainHistoryRecorder.Tests.Functional", "tests\BlockchainHistoryRecorder.Tests.Functional\BlockchainHistoryRecorder.Tests.Functional.csproj", "{CD1DA85D-84E1-4850-AD3F-4977BBFAC0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainHistoryRecorder.Tests.UnitTests", "tests\BlockchainHistoryRecorder.Tests.UnitTests\BlockchainHistoryRecorder.Tests.UnitTests.csproj", "{70E62A2B-DF43-4185-9338-CC3475D5750F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainHistoryRecorder.Tests", "tests\BlockchainHistoryRecorder.Tests\BlockchainHistoryRecorder.Tests.csproj", "{D6852039-31FC-4FB9-BC92-0316ED4AAAA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EB413BD-C5DF-49A5-A372-4AEAF4999952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB413BD-C5DF-49A5-A372-4AEAF4999952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB413BD-C5DF-49A5-A372-4AEAF4999952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB413BD-C5DF-49A5-A372-4AEAF4999952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A524171E-2634-4C37-9C5C-FE04D16FE7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A524171E-2634-4C37-9C5C-FE04D16FE7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A524171E-2634-4C37-9C5C-FE04D16FE7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A524171E-2634-4C37-9C5C-FE04D16FE7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1DA85D-84E1-4850-AD3F-4977BBFAC0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1DA85D-84E1-4850-AD3F-4977BBFAC0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1DA85D-84E1-4850-AD3F-4977BBFAC0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1DA85D-84E1-4850-AD3F-4977BBFAC0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E62A2B-DF43-4185-9338-CC3475D5750F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E62A2B-DF43-4185-9338-CC3475D5750F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E62A2B-DF43-4185-9338-CC3475D5750F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E62A2B-DF43-4185-9338-CC3475D5750F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6852039-31FC-4FB9-BC92-0316ED4AAAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6852039-31FC-4FB9-BC92-0316ED4AAAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6852039-31FC-4FB9-BC92-0316ED4AAAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6852039-31FC-4FB9-BC92-0316ED4AAAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8EB413BD-C5DF-49A5-A372-4AEAF4999952} = {92C5999C-A447-479E-8630-064E6FDC78DA}
+		{A524171E-2634-4C37-9C5C-FE04D16FE7C0} = {21C89A08-D942-45BE-A302-4EEB543573C0}
+		{CD1DA85D-84E1-4850-AD3F-4977BBFAC0DC} = {21C89A08-D942-45BE-A302-4EEB543573C0}
+		{70E62A2B-DF43-4185-9338-CC3475D5750F} = {21C89A08-D942-45BE-A302-4EEB543573C0}
+		{D6852039-31FC-4FB9-BC92-0316ED4AAAA5} = {21C89A08-D942-45BE-A302-4EEB543573C0}
+	EndGlobalSection
+EndGlobal
